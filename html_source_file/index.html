@@ -14,8 +14,8 @@
     <link rel="canonical" href="https://minimal-light-theme.yliu.me/"/>
     
 
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/favicon-dark.png" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/favicon.png" type="image/png" />
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/master_ball.jpg" type="image/jpg" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/master_ball.jpg" type="image/jpg" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
@@ -25,7 +25,65 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
     
+    <style>
+  
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* 半透明黑背景 */
+      display: none; /* 核心：默认隐藏 */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* 确保在最上层 */
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
+    /* 当 HTML 的锚点变为 "#wechat-modal" 时，显示遮罩层 */
+    .modal-overlay:target {
+      display: flex;
+      opacity: 1;
+    }
+
+    /* 模态框内容区域（放置图片） */
+    .modal-content {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      position: relative;
+      max-width: 300px; /* 限制二维码最大宽度 */
+      width: 80%; /* 响应式 */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* 微信二维码图片样式 */
+    .wechat-qr-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    /* 关闭按钮（右上角的 "×"） */
+    .modal-close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 30px;
+      height: 30px;
+      background: #333;
+      color: #fff !important;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-size: 20px;
+      text-decoration: none !important;
+      cursor: pointer;
+    }
+</style>
   </head>
   <body>
     <div class="wrapper">
@@ -69,14 +127,18 @@
           <i class="fab fa-github"></i>
         </a>
         
+        <a style="margin: 0 5px 0 0" href="https://www.xiaohongshu.com/" target="_blank">
+          <img src="./assets/img/xiaohongshu.jpg" style="width: 1.1rem; height: 1.1rem; vertical-align: -10%; border-radius: 3px;" alt="Xiaohongshu">
+        </a>
 
+        <a style="margin: 0 5px 0 0" href="#wechat-modal" title="WeChat">
+          <i class="fab fa-weixin"></i>
+        </a>
         
         <a style="margin: 0 5px 0 0" href="https://www.linkedin.com/">
           <i class="fab fa-linkedin"></i>
         </a>
-        
-
-        
+             
         <a style="margin: 0 0 0 0" href="https://twitter.com/">
           <i class="fab fa-twitter"></i>
         </a>
@@ -117,7 +179,7 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="./assets/img/teaser_example_2.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
+    <img src="./assets/img/teaser_example_2.png" class="teaser img-fluid z-depth-1" style="width:100;height:40%" />
             <abbr class="badge">MICCAI</abbr>
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -152,7 +214,7 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-    <img src="./assets/img/teaser_example.png" class="teaser img-fluid z-depth-1" style="width=100;height=40%" />
+    <img src="./assets/img/teaser_example.png" class="teaser img-fluid z-depth-1" style="width:100;height:40%" />
             <abbr class="badge">CVPR</abbr>
   </div>
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
@@ -228,6 +290,11 @@
       ga('create', 'UA-111540567-4', 'auto');
       ga('send', 'pageview');
     </script>
-    
+    <div id="wechat-modal" class="modal-overlay">
+        <div class="modal-content">
+          <a href="#close" class="modal-close" title="Close">×</a>
+          <img src="./assets/img/wechat.jpg" alt="WeChat QR Code" class="wechat-qr-image">
+        </div>
+    </div>
   </body>
 </html>

@@ -33,7 +33,52 @@
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
-
+    <style>
+      .wechat-modal {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wechat-modal[hidden] {
+        display: none !important;
+      }
+      .wechat-modal-backdrop {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .wechat-modal-panel {
+        position: relative;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      .wechat-modal-close {
+        position: absolute;
+        top: 10px; right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+      }
+      .wechat-modal-title {
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .wechat-modal-panel img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">

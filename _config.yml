@@ -11,10 +11,17 @@ description: Personal homepage of Qinghao Shao, focusing on 3D reconstruction
 canonical: https://cyrush7.github.io/
 
 # Links 
-# If you don't need one of them, you may delete the corresponding line.
 github_link: https://github.com/cyrush7
-xhs_link: https://www.xiaohongshu.com/user/profile/600036f20000000001002ad1?tab=note&subTab=note
-wechat_link:
+google_scholar: # 如果你有的话填这里，没有就留空
+cv_link: # 如果有简历链接填这里
+
+# 小红书配置 (变量名必须是 xiaohongshu_link)
+xiaohongshu_link: https://www.xiaohongshu.com/user/profile/600036f20000000001002ad1?tab=note&subTab=note
+xiaohongshu_icon: ./assets/img/xiaohongshu.jpg
+xiaohongshu_icon_fallback: ./assets/img/xiaohongshu.jpg
+
+# 微信配置 (变量名必须是 wechat_qr，并填入二维码图片路径)
+wechat_qr: ./assets/img/wechat.jpg
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 

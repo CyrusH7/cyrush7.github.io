@@ -8,7 +8,7 @@ Hi! I am Qinghao Shao (邵庆豪), an undergraduate student majoring in Electron
 
 Outside of research, I'm a huge fan of **Pokémon** and love playing **Apex Legends**. 
 
-I welcome any collaboration or discussion, whether about 3D vision or just for a game. Please feel free to reach out to me!我欢迎任何合作或讨论，无论是关于3D视觉还是只是为了游戏。请随时联系我！
+I welcome any collaboration or discussion, whether about 3D vision or just for a game. Please feel free to reach out to me!☺️
 
 ## Research Interests
 
